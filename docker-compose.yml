@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  homologacao:
+    image: danielneto/monipe-homologacao:testing
+    container_name: portal-homologacao
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "8001:443"
+    restart: always
+    tty: true
