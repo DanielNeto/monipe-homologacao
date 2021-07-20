@@ -10,7 +10,7 @@ Após o serviço do apache iniciar corretamente.
 
 Autenticação Web:
 
-Email: admin@rnp.br
+Email: admin@rnp.br  
 Senha: admin
 
 Autenticar na API:
@@ -19,7 +19,7 @@ Autenticar na API:
 curl --insecure --location --request POST 'https://localhost:8001/api/v1/auth/login' --form 'email="admin@rnp.br"' --form 'password="admin"'
 ```
 
-Usar o token obtido na autenticação para criar um teste:
+Usar o token ($TOKEN) obtido na autenticação para criar um teste:
 
 ```shell
 curl --insecure --location --request POST 'https://localhost:8001/api/v1/testpoint/99/tests' --header "Authorization: Bearer $TOKEN" --header 'Content-Type: application/json' -d @teste.json
@@ -27,4 +27,4 @@ curl --insecure --location --request POST 'https://localhost:8001/api/v1/testpoi
 
 Obs: Não esquecer de modificar a data do teste no arquivo *teste.json* para um valor válido.
 
-Documentação
+Documentação complementar da API: https://app.swaggerhub.com/apis-docs/DanielNeto/monipe/1.0-oas3
