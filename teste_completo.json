@@ -1,0 +1,47 @@
+{
+    "date": "2021-07-18 4:55:00",
+    "institution": "instituto-teste",
+    "unity": "unidade-teste",
+    "description": "descricao qualquer",
+    "obs": "aprovar",
+    "designation_op": "designacao-oq",
+    "designation_pop": "designacao-denovo",
+    "activation_ticket": "ticket-ativacao",
+    "operator": "operador",
+    "contract": "contrato-teste",
+    "emails": "listadeemails@email.com",
+    "mtu": 1500,
+    "source": {
+        "ip_address": "10.10.13.2",
+        "netmask": "255.255.255.252",
+        "gateway": "10.10.13.1",
+        "vlan": 1013
+    },
+    "destination": {
+        "ip_address": "10.10.13.6",
+        "netmask": "255.255.255.252",
+        "gateway": "10.10.13.5",
+        "vlan": 1013
+    },
+    "steps": [
+        {
+            "protocol": "UDP",
+            "bandwidth": 50,
+            "duration": 15,
+            "parallel_test": 1,
+            "protocol_extras": {
+                "udp_buffer_size" : 1
+            }
+        },
+        {
+            "protocol": "TCP",
+            "bandwidth": 100,
+            "duration": 15,
+            "parallel_test": 1,
+            "protocol_extras": {
+                "tcp_window_size" : 1,
+                "tcp_cong_alg" : "cubic"
+            }
+        }
+    ]
+}    
